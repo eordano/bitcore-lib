@@ -70,12 +70,6 @@ describe('Transaction.Input', function() {
       var input = Input();
       should.exist(input);
     });
-    it('fails with no script info', function() {
-      expect(function() {
-        var input = new Input({});
-        input.toString();
-      }).to.throw('Need a script to create an input');
-    });
     it('fromObject should work', function() {
       var jsonData = JSON.parse(coinbaseJSON);
       var input = Input.fromObject(jsonData);
